@@ -1,0 +1,20 @@
+commit e58effe5076605b789d5cc481b23f7390e8a0398
+Author: Patrik Henriksson <pate.henriksson@gmail.com>
+Date:   Wed Oct 30 14:42:50 2019 +0200
+
+    valmis
+
+ tiedostoja/file22.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 39463a5c208ef1fa54403778e0d9acb64ea1ef78
+Author: Patrik Henriksson <pate.henriksson@gmail.com>
+Date:   Wed Oct 30 14:37:34 2019 +0200
+
+    eka commit
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
