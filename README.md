@@ -1,5 +1,3 @@
-#Otsikko kyseiselle tiedostolle
+# Otsikko kyseiselle tiedostolle
 
-##Alaotsikko sivulle
-
-_TOIVOTTAVASTI TÄÄ TULEE BOLDINA_
+[gitlog.txt](https://github.com/silmish/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
