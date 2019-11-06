@@ -4,5 +4,4 @@
 
 [komentorivi.txt](https://github.com/silmish/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
-Muutos tänne
 
