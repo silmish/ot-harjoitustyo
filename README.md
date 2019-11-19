@@ -1,8 +1,9 @@
-# Viikko 1
+#PoeItems
 
-[gitlog.txt](https://github.com/silmish/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+Sovelluksen avulla on mahdollista selvittää erinlaiset tavat saada tieynlaisia tavaroita pelissä Path of Exile. Sovelluksen avulla on mahdollista luoda oma hahmo jolle kerätä halutut tavarat ja näin nähdä
+listaus tavoista miten tavart voi saada.
 
-[komentorivi.txt](https://github.com/silmish/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+##Dokumentointi
 
 [vaatimusmaarittely.md](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 

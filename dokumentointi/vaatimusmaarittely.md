@@ -2,7 +2,7 @@
 
 Sovelluksen tarkoitus on toimia helppona tietokantana pelille Path of Exile. Sovelluksen avulla pystyt valitsemaan tietyn esineen pelistä ja se kertoo miten ja mistä tämän kyseisen esineen on mahdollista löytää/saada. Tämän avulla on helpompi käsittää mitä pitää tehdä jotta halutun kokonaisuuden saa kerättyä.
 
-Käyttäjät
+##Käyttäjät
 Sovelluksella ei tule olemaan käyttäjiä ensimmäisessä versiossa.
 
 ## Perusversion tarjoama toiminnallisuus
