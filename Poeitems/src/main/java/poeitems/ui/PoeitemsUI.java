@@ -5,7 +5,10 @@
  */
 package poeitems.ui;
 
+import poeitems.dao.GoogleItemsDao;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import javafx.scene.text.Font;
 import javafx.geometry.Insets;
 import javafx.application.Application;
@@ -117,7 +120,7 @@ public class PoeitemsUI extends Application {
     private VBox clearButtons() {
 
         VBox clearbuttons = new VBox();
-        
+
         clearbuttons.setSpacing(30);
 
         for (int i = 0; i < 10; i++) {
@@ -129,13 +132,12 @@ public class PoeitemsUI extends Application {
     private Pane dropdownList() {
 
         ObservableList<String> items = FXCollections.observableArrayList(
-                "item 1 hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
-                "item 2",
-                "item 3"
+                "Item 1",
+                "item 2"
         );
 
         VBox itemlist = new VBox();
-        itemlist.setPadding(new Insets(-40,0,0,0));
+        itemlist.setPadding(new Insets(-40, 0, 0, 0));
         itemlist.setSpacing(30);
         itemlist.setAlignment(Pos.CENTER);
 
