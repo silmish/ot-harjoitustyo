@@ -1,2 +1,2 @@
-![Pakkausrakenne](/home/patrhenr/ot-harjoitustyo/dokumentointi/pakkausrakenne.png)
+![Pakkausrakenne](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/pakkausrakenne.png)
 
