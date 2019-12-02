@@ -5,13 +5,16 @@
  */
 package poeitems.ui;
 
+import java.awt.event.ActionEvent;
 import poeitems.dao.GoogleItemsDao;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import javafx.scene.text.Font;
 import javafx.geometry.Insets;
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
@@ -34,15 +37,18 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import static javax.swing.Spring.width;
+import poeitems.dao.GoogleSheetsConnector;
 
 /**
  *
  * @author patrhenr
  */
 public class PoeitemsUI extends Application {
+    
+    private static List<List<Object>> itemlocations;
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws Exception {
 
         primaryStage.setTitle("Path of Exile unique item database");
 
@@ -61,6 +67,8 @@ public class PoeitemsUI extends Application {
         primaryStage.setScene(layout);
 
         primaryStage.show();
+        
+        
     }
 
     public static void main(String[] args) {
@@ -68,7 +76,7 @@ public class PoeitemsUI extends Application {
     }
 
     //Main layout of the character tab
-    private Pane characterLayout() {
+    private Pane characterLayout() throws Exception {
         BorderPane mainwindow = new BorderPane();
         mainwindow.setPadding(new Insets(60, 60, 60, 60));
         mainwindow.setLeft(itemSlots());
@@ -91,8 +99,8 @@ public class PoeitemsUI extends Application {
         Label mainhand = new Label("Main hand");
         mainhand.setFont(new Font("Verdana", 18));
 
-        Label secondhand = new Label("Second hand");
-        secondhand.setFont(new Font("Verdana", 18));
+        Label offhand = new Label("Second hand");
+        offhand.setFont(new Font("Verdana", 18));
 
         Label amulet = new Label("Amulet");
         amulet.setFont(new Font("Verdana", 18));
@@ -112,7 +120,7 @@ public class PoeitemsUI extends Application {
         Label boots = new Label("Boots");
         boots.setFont(new Font("Verdana", 18));
 
-        itemlayout.getChildren().addAll(helmet, armor, mainhand, secondhand, amulet, leftring, rightring, belt, gloves, boots);
+        itemlayout.getChildren().addAll(helmet, armor, mainhand, offhand, amulet, leftring, rightring, belt, gloves, boots);
         return itemlayout;
     }
 
@@ -129,23 +137,72 @@ public class PoeitemsUI extends Application {
         return clearbuttons;
     }
 
-    private Pane dropdownList() {
+    private Pane dropdownList() throws Exception {
+        
+        //List<Object> test = new ArrayList<>();
 
-        ObservableList<String> items = FXCollections.observableArrayList(
-                "Item 1",
-                "item 2"
-        );
+        List<List<String>> helmetnames = GoogleItemsDao.readHelmets();
+        ObservableList<Object> helmets = FXCollections.observableArrayList(helmetnames);
+        ComboBox helmet = new ComboBox(helmets);
+        helmet.setOnAction(e -> setLocations((helmet.getValue())));
+
+        List<List<String>> armornames = GoogleItemsDao.readArmors();
+        ObservableList<Object> armors = FXCollections.observableArrayList(armornames);
+        ComboBox armor = new ComboBox(armors);
+
+        List<List<String>> mainhandnames = GoogleItemsDao.readMainHands();
+        ObservableList<Object> mainhands = FXCollections.observableArrayList(mainhandnames);
+        ComboBox mainhand = new ComboBox(mainhands);
+
+        List<List<String>> offhandnames = GoogleItemsDao.readOffHands();
+        ObservableList<Object> offhands = FXCollections.observableArrayList(offhandnames);
+        ComboBox offhand = new ComboBox(offhands);
+
+        List<List<String>> amuletnames = GoogleItemsDao.readAmulets();
+        ObservableList<Object> amulets = FXCollections.observableArrayList(amuletnames);
+        ComboBox amulet = new ComboBox(amulets);
+
+        List<List<String>> ringnames1 = GoogleItemsDao.readRings();
+        ObservableList<Object> rings1 = FXCollections.observableArrayList(ringnames1);
+        ComboBox ring1 = new ComboBox(rings1);
+
+        List<List<String>> ringnames2 = GoogleItemsDao.readRings();
+        ObservableList<Object> rings2 = FXCollections.observableArrayList(ringnames2);
+        ComboBox ring2 = new ComboBox(rings2);
+
+        List<List<String>> beltnames = GoogleItemsDao.readBelts();
+        ObservableList<Object> belts = FXCollections.observableArrayList(beltnames);
+        ComboBox belt = new ComboBox(belts);
+
+        List<List<String>> glovesnames = GoogleItemsDao.readGloves();
+        ObservableList<Object> gloves = FXCollections.observableArrayList(glovesnames);
+        ComboBox glove = new ComboBox(gloves);
+
+        List<List<String>> bootsnames = GoogleItemsDao.readBoots();
+        ObservableList<Object> boots = FXCollections.observableArrayList(bootsnames);
+        ComboBox boot = new ComboBox(boots);
 
         VBox itemlist = new VBox();
         itemlist.setPadding(new Insets(-40, 0, 0, 0));
         itemlist.setSpacing(30);
         itemlist.setAlignment(Pos.CENTER);
 
-        for (int i = 0; i < 10; i++) {
-            itemlist.getChildren().add(new ComboBox(items));
-        }
+        itemlist.getChildren().addAll(helmet, armor, mainhand, offhand, amulet, ring1, ring2, belt, glove, boot);
 
         return itemlist;
+    }
+    
+    public static List itemlocations() {
+        return itemlocations;
+    }
+    
+    public static void setLocations(Object name) {
+        
+        List<List<Object>> locations = GoogleItemsDao.itemLocations(name);
+        for(List row : locations) {
+            itemlocations.add(row);
+            System.out.println(row);
+        }
     }
 
 }

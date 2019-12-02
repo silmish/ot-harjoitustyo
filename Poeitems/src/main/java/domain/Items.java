@@ -13,12 +13,17 @@ public class Items {
     
     private String name;
     private String type;
-    private int level;
+    private String map;
+    private String divcard;
+    private String area;
     
-    public Items(String name, String type, int level) {
+    
+    public Items(String name, String type, String map, String divcard, String area) {
         this.name = name;
         this.type = type;
-        this.level = level;
+        this.map = map;
+        this.divcard = divcard;
+        this.area = area;
        
     }
 
@@ -30,8 +35,29 @@ public class Items {
         return type;
     }
 
-    public int getLevel() {
-        return level;
+    public String getMap() {
+        return map;
     }
+
+    public void setMap(String map) {
+        this.map = map;
+    }
+
+    public String getDivcard() {
+        return divcard;
+    }
+
+    public void setDivcard(String divcard) {
+        this.divcard = divcard;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
     
 }

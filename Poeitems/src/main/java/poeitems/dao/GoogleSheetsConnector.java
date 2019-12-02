@@ -30,6 +30,8 @@ import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -40,7 +42,8 @@ public class GoogleSheetsConnector {
     private static Sheets sheetsService;
     private static String applicationName = "Google Sheets Example";
     private static String spreadsheetId = "1unsZDU8xOI8WzlafIW9i5NZmBeta4U19rcVJobJkvGU";
-
+    
+    
     private static Credential authorize() throws IOException, GeneralSecurityException, Exception {
         InputStream in = GoogleSheetsConnector.class.getResourceAsStream("/credentials.json");
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(
@@ -78,7 +81,7 @@ public class GoogleSheetsConnector {
     public static List readDataSheets() throws GeneralSecurityException, Exception {
 
         sheetsService = getSheetsService();
-        String range = "A1:A8";
+        String range = "A2:D50";
 
         ValueRange response = sheetsService.spreadsheets().values()
                 .get(spreadsheetId, range)
@@ -95,6 +98,8 @@ public class GoogleSheetsConnector {
      * @throws IOException
      * @throws Exception
      */
+    
+    
     public static void writeToDataSheets() throws IOException, Exception {
         
         sheetsService = getSheetsService();

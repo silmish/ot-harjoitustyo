@@ -3,23 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package domain;
+package poeitems.dao;
 
 /**
  *
  * @author patrhenr
  */
-public class Divcards {
-    
-    private String name;
-    
-    
-    public Divcards(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
+public class ItemsDao {
     
 }
