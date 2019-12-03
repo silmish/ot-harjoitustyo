@@ -8,4 +8,5 @@ Päivä | Aika | Mitä tein
 26.11 | 6 | Ongelmien kautta sain Google Apin toimimaan oikein
 27.11 | 6 | Kokeilin eri tapoja miten rakentaa tiedonkulun googlesta -> UI
  2.12 | 4 | Lisäilin tietoja jotka oli jäänyt rästiin aikasemmilta viikoilta
-
+ 3.12 | 4 | Jatkoin rästiin jääneiden asioiden tekemistä, lisäsin testejä.
+Yhteensä | 43 |

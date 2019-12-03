@@ -144,7 +144,8 @@ public class PoeitemsUI extends Application {
         List<List<String>> helmetnames = GoogleItemsDao.readHelmets();
         ObservableList<Object> helmets = FXCollections.observableArrayList(helmetnames);
         ComboBox helmet = new ComboBox(helmets);
-        helmet.setOnAction(e -> setLocations((helmet.getValue())));
+        helmet.setOnAction(e -> setLocations(helmet.getValue()));
+        //System.out.println(helmet.getValue());
 
         List<List<String>> armornames = GoogleItemsDao.readArmors();
         ObservableList<Object> armors = FXCollections.observableArrayList(armornames);
@@ -199,10 +200,11 @@ public class PoeitemsUI extends Application {
     public static void setLocations(Object name) {
         
         List<List<Object>> locations = GoogleItemsDao.itemLocations(name);
-        for(List row : locations) {
-            itemlocations.add(row);
-            System.out.println(row);
-        }
+        System.out.println(Arrays.toString(locations.toArray()));
+        
+        //for(List row : locations) {
+            //itemlocations.add(row);
+            //System.out.println(row);
     }
 
 }

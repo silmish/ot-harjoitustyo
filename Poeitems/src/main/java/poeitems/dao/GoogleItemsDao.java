@@ -29,8 +29,10 @@ public class GoogleItemsDao {
     public static List itemLocations(Object name) {
         
        List<List<Object>> locations = items.stream()
-                .filter(item -> item.get(0).equals(name))
+                .filter(item -> item.get(1).equals(name))
                 .collect(Collectors.toList());
+       
+        System.out.println(locations.size());
        
         return locations;
     }
