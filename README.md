@@ -9,7 +9,7 @@ listaus tavoista miten tavart voi saada.
 
 [tuntikirjanpito.md](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 
-[arkkitehtuuri.md](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/pakkausrakenne.png)
+[arkkitehtuuri.md](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
 
 
 ## Komentorivitoiminnot
