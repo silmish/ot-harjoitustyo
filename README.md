@@ -41,6 +41,8 @@ Komento
 mvn package
 ```
 
+generoi hakemistoon target suoritettavan jar-tiedoston Poeitems-1.0-SNAPSHOT.jar
+
 ### JavaDoc
 
 JavaDoc generoidaan komennolla
