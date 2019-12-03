@@ -6,7 +6,7 @@ Sovelluksen tarkoitus on toimia helppona tietokantana pelille Path of Exile. Sov
 Sovelluksella ei tule olemaan käyttäjiä ensimmäisessä versiossa.
 
 ## Perusversion tarjoama toiminnallisuus
-* Voit valita esineen nimen perusteella
+* Voit valita esineen nimen perusteella - Tehty
 	* Mistä esine voi löytyä pelissä.
 	* Esineestä tulee tiedot miten sen voi saada muita keinoja kuin löytämällä.
 		* Mistä kyseiset esineet löytyvät, miten saada kyseinen esine muilla keinoilla.
