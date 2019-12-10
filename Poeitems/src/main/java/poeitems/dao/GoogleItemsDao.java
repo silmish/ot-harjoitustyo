@@ -6,174 +6,223 @@
 package poeitems.dao;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+import domain.Items;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 
 /**
- *
- * @author patrhenr
+ * Class generates the base for items to be shown in the UI 
+ * 
  */
 public class GoogleItemsDao {
 
-    private static List<List<Object>> items;
+    private static List<List<Items>> items;
 
     public GoogleItemsDao() {
 
     }
-
+    /**
+     * Generates a list of all the items found in GoogleSheets
+     * 
+     * @throws java.lang.Exception    
+    */
     public static void importItems() throws Exception {
         items = GoogleSheetsConnector.readDataSheets();
-    }
-    
-    public static List itemLocations(Object name) {
-        
-       List<List<Object>> locations = items.stream()
-                .filter(item -> item.get(1).equals(name))
-                .collect(Collectors.toList());
-       
-        System.out.println(locations.size());
-       
-        return locations;
+
+        /*List<String> items = sheetsItems.stream()
+                .map(object -> Objects.toString(object, null))
+                .collect(Collectors.toList());*/
+
+ /*for (List<Items> rows : items) {
+            String[] test = rows.split("[,?.@]+");
+            Items item = new Items(test[0].replaceAll("[^a-zA-Z0-9]", ""), test[1], test[2], test[3], test[4].replaceAll("[^a-zA-Z0-9]", ""));
+            //System.out.println(item.getType());
+        }*/
     }
 
+    /*public static List itemLocations(Object name) {
+
+        List<List<Object>> locations = items.stream()
+                .filter(item -> item.get(1).equals(name))
+                .collect(Collectors.toList());
+
+        return locations;
+    }*/
     /**
+     * Creating a list of all item types that have type helmet
      *
-     * @return @throws Exception
+     * @return All the items that have type helmet
+     * @throws java.lang.Exception
      */
     public static List readHelmets() throws Exception {
 
-        List<List<Object>> helmet = items.stream()
-                .filter(item -> item.get(0).equals("helmet"))
-                .collect(Collectors.toList());
+        List<Object> helmetNames = new ArrayList<>();
 
-        List<Object> helmetnames = new ArrayList<>();
+        for (List row : items) {
 
-        for (List row : helmet) {
-            helmetnames.add(row.get(1));
+            if (row.get(0).equals("helmet")) {
+                helmetNames.add(row.get(1));
+            }
+
         }
 
-        return helmetnames;
+        return helmetNames;
     }
 
+    /**
+     * Creating a list of all item types that have type armor
+     *
+     * @return All the items that have type armor
+     * @throws java.lang.Exception
+     */
     public static List readArmors() throws Exception {
 
-        List<List<Object>> armor = items.stream()
-                .filter(item -> item.get(0).equals("armor"))
-                .collect(Collectors.toList());
+        List<Object> armorNames = new ArrayList<>();
 
-        List<Object> armornames = new ArrayList<>();
-
-        for (List row : armor) {
-            armornames.add(row.get(1));
+        for (List row : items) {
+            if (row.get(0).equals("armor")) {
+                armorNames.add(row.get(1));
+            }
         }
 
-        return armornames;
+        return armorNames;
     }
 
+    /**
+     * Creating a list of all item types that have type main-hand
+     *
+     * @return All the items that have type main-hand
+     * @throws java.lang.Exception
+     */
     public static List readMainHands() throws Exception {
 
-        List<List<Object>> mainhand = items.stream()
-                .filter(item -> item.get(0).equals("main-hand"))
-                .collect(Collectors.toList());
+        List<Object> mainHandNames = new ArrayList<>();
 
-        List<Object> mainhandnames = new ArrayList<>();
-
-        for (List row : mainhand) {
-            mainhandnames.add(row.get(1));
+        for (List row : items) {
+            if (row.get(0).equals("main-hand")) {
+                mainHandNames.add(row.get(1));
+            }
         }
 
-        return mainhandnames;
+        return mainHandNames;
     }
 
+    /**
+     * Creating a list of all item types that have type off-hand
+     *
+     * @return All the items that have type off-hand
+     * @throws java.lang.Exception
+     */
     public static List readOffHands() throws Exception {
 
-        List<List<Object>> offhand = items.stream()
-                .filter(item -> item.get(0).equals("off-hand"))
-                .collect(Collectors.toList());
+        List<Object> offHandNames = new ArrayList<>();
 
-        List<Object> offhandnames = new ArrayList<>();
-
-        for (List row : offhand) {
-            offhandnames.add(row.get(1));
+        for (List row : items) {
+            if (row.get(0).equals("off-hand")) {
+                offHandNames.add(row.get(1));
+            }
         }
 
-        return offhandnames;
+        return offHandNames;
     }
 
+    /**
+     * Creating a list of all item types that have type amulet
+     *
+     * @return All the items that have type amulet
+     * @throws java.lang.Exception
+     */
     public static List readAmulets() throws Exception {
 
-        List<List<Object>> amulet = items.stream()
-                .filter(item -> item.get(0).equals("amulet"))
-                .collect(Collectors.toList());
+        List<Object> amuletNames = new ArrayList<>();
 
-        List<Object> amuletnames = new ArrayList<>();
-
-        for (List row : amulet) {
-            amuletnames.add(row.get(1));
+        for (List row : items) {
+            if (row.get(0).equals("amulet")) {
+                amuletNames.add(row.get(1));
+            }
         }
 
-        return amuletnames;
+        return amuletNames;
     }
 
+    /**
+     * Creating a list of all item types that have type ring
+     *
+     * @return All the items that have type ring
+     * @throws java.lang.Exception
+     */
     public static List readRings() throws Exception {
 
-        List<List<Object>> ring = items.stream()
-                .filter(item -> item.get(0).equals("ring"))
-                .collect(Collectors.toList());
+        List<Object> ringNames = new ArrayList<>();
 
-        List<Object> ringnames = new ArrayList<>();
-
-        for (List row : ring) {
-            ringnames.add(row.get(1));
+        for (List row : items) {
+            if (row.get(0).equals("ring")) {
+                ringNames.add(row.get(1));
+            }
         }
 
-        return ringnames;
+        return ringNames;
     }
 
+    /**
+     * Creating a list of all item types that have type belt
+     *
+     * @return All the items that have type belt
+     * @throws java.lang.Exception
+     */
     public static List readBelts() throws Exception {
 
-        List<List<Object>> belt = items.stream()
-                .filter(item -> item.get(0).equals("belt"))
-                .collect(Collectors.toList());
+        List<Object> beltNames = new ArrayList<>();
 
-        List<Object> beltnames = new ArrayList<>();
-
-        for (List row : belt) {
-            beltnames.add(row.get(1));
+        for (List row : items) {
+            if (row.get(0).equals("belt")) {
+                beltNames.add(row.get(1));
+            }
         }
 
-        return beltnames;
+        return beltNames;
     }
 
+    /**
+     * Creating a list of all item types that have type gloves
+     *
+     * @return All the items that have type gloves
+     * @throws java.lang.Exception
+     */
     public static List readGloves() throws Exception {
 
-        List<List<Object>> glove = items.stream()
-                .filter(item -> item.get(0).equals("gloves"))
-                .collect(Collectors.toList());
+        List<Object> gloveNames = new ArrayList<>();
 
-        List<Object> glovenames = new ArrayList<>();
-
-        for (List row : glove) {
-            glovenames.add(row.get(1));
+        for (List row : items) {
+            if (row.get(0).equals("gloves")) {
+                gloveNames.add(row.get(1));
+            }
         }
 
-        return glovenames;
+        return gloveNames;
     }
 
+    /**
+     * Creating a list of all item types that have type boots
+     *
+     * @return All the items that have type boots
+     * @throws java.lang.Exception
+     */
     public static List readBoots() throws Exception {
 
-        List<List<Object>> boots = items.stream()
-                .filter(item -> item.get(0).equals("boots"))
-                .collect(Collectors.toList());
+        List<Object> bootsNames = new ArrayList<>();
 
-        List<Object> bootsnames = new ArrayList<>();
-
-        for (List row : boots) {
-            bootsnames.add(row.get(1));
+        for (List row : items) {
+            if (row.get(0).equals("boots")) {
+                bootsNames.add(row.get(1));
+            }
         }
 
-        return bootsnames;
+        return bootsNames;
     }
 
 }

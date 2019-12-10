@@ -81,7 +81,7 @@ public class GoogleSheetsConnector {
     public static List readDataSheets() throws GeneralSecurityException, Exception {
 
         sheetsService = getSheetsService();
-        String range = "A2:D50";
+        String range = "A2:E50";
 
         ValueRange response = sheetsService.spreadsheets().values()
                 .get(spreadsheetId, range)

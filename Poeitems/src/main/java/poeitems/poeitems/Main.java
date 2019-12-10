@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.List;
 import poeitems.ui.PoeitemsUI;
 import poeitems.dao.GoogleItemsDao;
+import domain.Items;
+import domain.ItemsService;
+import poeitems.dao.ItemsDao;
 
 public class Main {
 
@@ -16,7 +19,6 @@ public class Main {
         GoogleItemsDao.importItems();
 
         PoeitemsUI.main(args);
-
     }
 
 }

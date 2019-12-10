@@ -4,11 +4,15 @@
  * and open the template in the editor.
  */
 package poeitems.dao;
+import domain.Items;
+import java.util.List;
 
 /**
  *
  * @author patrhenr
  */
-public class ItemsDao {
+public interface ItemsDao {
+    
+    
     
 }

@@ -5,10 +5,25 @@
  */
 package domain;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import poeitems.dao.ItemsDao;
+
 /**
  *
  * @author patrhenr
  */
 public class ItemsService {
+
+    private ItemsDao itemsDao;
+    private List<List<Object>> items;
+
+    public ItemsService(ItemsDao itemsdao) {
+        this.itemsDao = itemsdao;
+
+    }
+
     
+
 }
