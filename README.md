@@ -5,6 +5,8 @@ listaus tavoista miten tavart voi saada.
 
 ## Dokumentointi
 
+[Kayttoohje.md](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/kayttoohje.md)
+
 [vaatimusmaarittely.md](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 
 [tuntikirjanpito.md](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
