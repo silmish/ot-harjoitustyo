@@ -9,4 +9,8 @@ Päivä | Aika | Mitä tein
 27.11 | 6 | Kokeilin eri tapoja miten rakentaa tiedonkulun googlesta -> UI
  2.12 | 4 | Lisäilin tietoja jotka oli jäänyt rästiin aikasemmilta viikoilta
  3.12 | 4 | Jatkoin rästiin jääneiden asioiden tekemistä, lisäsin testejä.
-Yhteensä | 43 |
+ 4.12 | 5 | Taistelin javafx asioiden kanssa, koitin selvittää miten saada seruaava askel tehtyä.
+ 5.12 | 5 | Jatkoin taistelua, ei vieläkään ratkaisua.
+ 9.12 | 6 | Taistelu jatkui javafx:sän parissa, ei vieläkään ratkaisua.
+10.12 | 5 | Tein viikko tehtäviä jotta jokin asia menisi eteenpäin.
+Yhteensä | 64 |
