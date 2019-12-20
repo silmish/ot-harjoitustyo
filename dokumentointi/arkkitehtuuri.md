@@ -12,7 +12,7 @@ Käyttöliittymässä on yksi päänäkymä ja toinen näkymä koskien esineiden
 Jokainen näkymä on toteutettu omana Scene-oliona ja näkyvät yksi kerrallaan. Jokainen scene on omana tabview:ssä. Käyttöliittymä on rakennettu luokkaan poeitems.ui.PoeitemsUi.
 
 ## Sovelluslogiikka
-![Pakkausrakenne](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/pakkausrakenne.png)
+![Pakkausrakenne]()
 
 ##  Tietojenhaku
 
@@ -22,7 +22,7 @@ Pakkaus poeitems.dao sisältää luokat GoogleSheetsConnector ja  GoogleItemsDao
 
 Kuvassa näkyy tietojen hakeminen google sheetsistä ja miten ne saadaan näkymään oikeassa kohdassa käyttöliittymässä.
 
-![Sekvenssikaavio](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/Add%20items%20to%20display%20locations.png)
+![Sekvenssikaavio](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/Kuvat/Add%20items%20to%20display%20locations.png)
 
 ## Ohjelman rakenteeseen jääneet heikkoudet
 
