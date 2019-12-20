@@ -24,3 +24,11 @@ Käyttöliittymä pakkaus on jätetty kokonaan pois. Pakkauksien poeitems.dao ja
 ![testikattavuus](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/Kuvat/testikattavuus.png)
 
 Testien rivikattavuus on 54%, alhainen rivi- ja haaratuvuuskattavuus johtuu siitä että luokan GoogleSheetsDao rivejä ei onnistuttu kattamaan testeissä.
+
+### Toiminnallisuus
+
+Kaikki toiminnallisuudet jotka on määrittelydokumentissa ja käyttöohjeen toiminnallisuudet on testattu automaattisesti ja manuaalisesti. Jokainen erikoistapaus ei ole huomioitu testeissä taikka koodissa.
+
+## Sovellukseen jääneet laatuongelmat
+
+Sovellus ei ota huomioon jokaista erikoistapausta. Mikäli syötetään tyhjiä tietoa jne, ei niistä ole virheilmoituksia. Sovelluksen toiminnallisuus ongelma joka on huomattu on clear napin käyttö esineiden listauksessa, jolloin dropdown listoihin jää vielä jäljelle vanha valinta, eikä resetoi tätä. Tämä tuottaa hieman ongelmia käytettävyyden kannalta sillä joutuu vaihtamaan esineitä ja poistamaan ne jotta saman saa uudestaan valittua, mikäli siihen tarve.

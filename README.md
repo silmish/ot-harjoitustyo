@@ -13,6 +13,8 @@ listaus tavoista miten tavart voi saada.
 
 [arkkitehtuuri.md](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
 
+[testausdokumentti.md](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/testaus.md)
+
 ## Releaset
 
 [Viikko 5](https://github.com/silmish/ot-harjoitustyo/releases/tag/viikko5)

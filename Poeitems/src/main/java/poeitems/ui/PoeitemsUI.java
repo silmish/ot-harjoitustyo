@@ -81,12 +81,12 @@ public class PoeitemsUI extends Application {
         TabPane mainview = new TabPane();
         mainview.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
         
-        Tab locations = new Tab("Character");
+        Tab locations = new Tab("Item location");
         Tab addTab = new Tab("Add items");
         
         mainview.getTabs().addAll(locations, addTab);
         
-        locations.setContent(characterLayout());
+        locations.setContent(itemLocationLayout());
         addTab.setContent(addItemLayout());
         Scene layout = new Scene(mainview, 680, 720);
         
@@ -101,7 +101,7 @@ public class PoeitemsUI extends Application {
     }
 
     //Main layout of the character tab
-    public Pane characterLayout() throws Exception {
+    public Pane itemLocationLayout() throws Exception {
         BorderPane mainWindow = new BorderPane();
         
         mainWindow.setPadding(new Insets(40, 40, 40, 40));
@@ -226,7 +226,7 @@ public class PoeitemsUI extends Application {
         Label mainhand = new Label("Main hand");
         mainhand.setFont(new Font("Verdana", 18));
         
-        Label offhand = new Label("Second hand");
+        Label offhand = new Label("Off hand");
         offhand.setFont(new Font("Verdana", 18));
         
         Label amulet = new Label("Amulet");
