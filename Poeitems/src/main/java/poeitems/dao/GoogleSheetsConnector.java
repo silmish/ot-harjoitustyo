@@ -12,30 +12,21 @@ import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
 import com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
-import static com.google.api.client.repackaged.com.google.common.base.Joiner.on;
 import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.SheetsScopes;
 import com.google.api.services.sheets.v4.model.AppendValuesResponse;
-import com.google.api.services.sheets.v4.model.BatchUpdateSpreadsheetRequest;
-import com.google.api.services.sheets.v4.model.DeleteDimensionRequest;
-import com.google.api.services.sheets.v4.model.DimensionRange;
-import com.google.api.services.sheets.v4.model.Request;
-import com.google.api.services.sheets.v4.model.UpdateValuesResponse;
 import com.google.api.services.sheets.v4.model.ValueRange;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.security.GeneralSecurityException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 /**
  *
- * @author patrhenr
+ * Class connects to the Google API and authenticates the connection to the wanted Google Sheet.
  */
 public class GoogleSheetsConnector {
 
@@ -43,7 +34,11 @@ public class GoogleSheetsConnector {
     private static String applicationName = "Google Sheets Example";
     private static String spreadsheetId = "1unsZDU8xOI8WzlafIW9i5NZmBeta4U19rcVJobJkvGU";
     
-    
+    /**
+    *
+    *Reads the authentication data from credential json and creates authorised connection to the Google API.
+    *
+    */
     private static Credential authorize() throws IOException, GeneralSecurityException, Exception {
         InputStream in = GoogleSheetsConnector.class.getResourceAsStream("/credentials.json");
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(
@@ -64,6 +59,15 @@ public class GoogleSheetsConnector {
         return credential;
     }
 
+    /**
+     *
+     * @return
+     * @throws IOException
+     * @throws GeneralSecurityException
+     * @throws Exception
+     * 
+     * Generates connection to the Sheets API.
+     */
     public static Sheets getSheetsService() throws IOException, GeneralSecurityException, Exception {
         Credential credential = authorize();
 
@@ -77,11 +81,13 @@ public class GoogleSheetsConnector {
      *
      * @return
      * @throws java.security.GeneralSecurityException
+     * 
+     * Reads data from the given sheet.
      */
-    public static List readDataSheets() throws GeneralSecurityException, Exception {
+    public static List readDataSheets() throws Exception {
 
         sheetsService = getSheetsService();
-        String range = "A2:E50";
+        String range = "A2:E100";
 
         ValueRange response = sheetsService.spreadsheets().values()
                 .get(spreadsheetId, range)
@@ -95,20 +101,28 @@ public class GoogleSheetsConnector {
     /**
      *
      * @param type
+     * @param name
+     * @param divCard
+     * @param map
+     * @param area
      * @throws IOException
      * @throws Exception
      */
     
-    
-    public static void writeToDataSheets() throws IOException, Exception {
+    /*
+    *
+    *Adds a row to the sheet with given parameters.
+    *
+    */
+    public static void writeToDataSheets(String type, String name, String divCard, String map, String area) throws IOException, Exception {
         
         sheetsService = getSheetsService();
-        String range = "A1:F8";
+        String range = "A2:E100";
         
         
         ValueRange appendBody = new ValueRange()
                 .setValues(Arrays.asList(
-                        Arrays.asList("Kokeillaan", "Miten", "Tää", "toimii")
+                        Arrays.asList(type, name, divCard, map, area)
                 ));
         
         AppendValuesResponse appendresult = sheetsService.spreadsheets().values()

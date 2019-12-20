@@ -3,14 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package domain;
-
-import java.util.ArrayList;
-import java.util.List;
+package poeitems.domain;
 
 /**
  *
- * @author patrhenr
+ * Class for item generation.
  */
 public class Items {
 
@@ -42,32 +39,12 @@ public class Items {
         return map;
     }
 
-    public void setMap(String map) {
-        this.map = map;
-    }
-
-    public String getDivcard() {
+    public String getDivCard() {
         return divcard;
-    }
-
-    public void setDivcard(String divcard) {
-        this.divcard = divcard;
     }
 
     public String getArea() {
         return area;
-    }
-
-    public void setArea(String area) {
-        this.area = area;
-    }
-    @Override
-    public boolean equals(Object o) {
-        if(!(o instanceof Items)){
-            return false;
-        }
-        Items other = (Items) o;
-        return name == other.name;
     }
 
 }
