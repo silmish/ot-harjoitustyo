@@ -4,7 +4,7 @@
 
 Sovellusksen pakkausrakenne on seuraava:
 
-![pakkausrakenne]()
+![pakkausrakenne](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/Kuvat/rakenne.png)
 
 Pakkaus poeitems.ui sisältää javaFX:llä toteutetun käyttöliittymän ohjelmalle.
 Pakkaus poeitems.dao sisältää tietojen hakemiseen liittyvän koodin google sheetsistä.
@@ -29,7 +29,7 @@ Sovelluslogiikan datamallin muodostaa luokka Items, joka kuvaa esineiden tietoja
 Sovelluksen sydän on GoogleSheetsDao luokka joka hyodyntää Items luokan esine tietoja ja hakee GoogleSheetsConnection luokasta esine listan tietokannasta.
 
 Pakkausten ja luokkien suhdetta kuvaava kuva: 
-![Pakkauskaavio]()
+![Pakkauskaavio](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/Kuvat/pakkausrakenne.png)
 
 ##  Tietojenhaku ja tallennus
 
