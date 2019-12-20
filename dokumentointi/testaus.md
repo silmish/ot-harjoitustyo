@@ -21,4 +21,6 @@ Dao luokkien testaus osoittautut hankalaksi. GoogleSheetsDao luokan testaus ei o
 
 Käyttöliittymä pakkaus on jätetty kokonaan pois. Pakkauksien poeitems.dao ja poeitems.domain luokkien testaus on suoritettu kuten aikaisemmin kuvailtu. 
 
-![testikattavuus]()
+![testikattavuus](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/Kuvat/testikattavuus.png)
+
+Testien rivikattavuus on 54%, alhainen rivi- ja haaratuvuuskattavuus johtuu siitä että luokan GoogleSheetsDao rivejä ei onnistuttu kattamaan testeissä.
