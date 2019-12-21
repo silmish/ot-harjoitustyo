@@ -13,4 +13,12 @@ Päivä | Aika | Mitä tein
  5.12 | 5 | Jatkoin taistelua, ei vieläkään ratkaisua.
  9.12 | 6 | Taistelu jatkui javafx:sän parissa, ei vieläkään ratkaisua.
 10.12 | 5 | Tein viikko tehtäviä jotta jokin asia menisi eteenpäin.
+14.12 | 6 | Päädyin manuaaliseen ratkaisuun javaFX kanssa, automaatio ei nyt onnistunut.
+15.12 | 5 | Taistelin DAO rakennelman ja googlesheetsin kanssa. Ei vielä toimi.
+16.12 | 5 | Jatkoin DAO rakennelman kanssa, en saa googlesheetsiä toimimaan DAO rakenteen kanssa..
+17.12 | 6 | Palautin projektin ennalleen ja päätin unohtaa DAO:n, jatkoin UI viilauasta.
+18.12 | 5 | Rakentelin UI puolta ja lisäsin uuden näkymän ja sen toiminnallisuuden.
+19.12 | 5 | Korjailin projektin ongelmia javadocin/jacocon kanssa, lisäilin testejä.
+20.12 | 4 | Ongelmia testien kanssa, en kerennyt setvimään täysin mistä kyse, testit jotenkin ratkaistu.
+21.12 | 4 | Tein viimeiset viilaukset dokumentteihin, linkit jne.
 Yhteensä | 64 |

@@ -17,7 +17,7 @@ listaus tavoista miten tavart voi saada.
 
 ## Releaset
 
-[Viikko 5](https://github.com/silmish/ot-harjoitustyo/releases/tag/viikko5)
+[Viikko 7](https://github.com/silmish/ot-harjoitustyo/releases/tag/1.0)
 
 ## Komentorivitoiminnot
 

@@ -39,7 +39,7 @@ Pakkaus poeitems.dao sisältää luokat GoogleSheetsConnector ja  GoogleItemsDao
 
 Kuvassa näkyy tietojen hakeminen google sheetsistä ja miten ne saadaan näkymään oikeassa kohdassa käyttöliittymässä.
 
-![Sekvenssikaavio](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/Kuvat/Add%20items%20to%20display%20locations.png)
+![Sekvenssikaavio](https://github.com/silmish/ot-harjoitustyo/blob/master/dokumentointi/Kuvat/Select%20items%20to%20display%20locations.png)
 
 ## Ohjelman rakenteeseen jääneet heikkoudet
 
