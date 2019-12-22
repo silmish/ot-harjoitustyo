@@ -61,10 +61,10 @@ public class PoeitemsUI extends Application {
         listViewMaps = new ListView();
         listViewArea = new ListView();
         listViewNames = new ListView();
-        listViewCards.setPrefWidth(275);
-        listViewMaps.setPrefWidth(210);
-        listViewArea.setPrefWidth(210);
-        listViewNames.setPrefWidth(275);
+        listViewCards.setPrefWidth(300);
+        listViewMaps.setPrefWidth(250);
+        listViewArea.setPrefWidth(250);
+        listViewNames.setPrefWidth(300);
         addLocation = new Button("Add items");
         clearLocation = new Button("Clear items");
         addItem = new Button("Add item");
@@ -88,7 +88,7 @@ public class PoeitemsUI extends Application {
         
         locations.setContent(itemLocationLayout());
         addTab.setContent(addItemLayout());
-        Scene layout = new Scene(mainview, 680, 720);
+        Scene layout = new Scene(mainview, 760, 720);
         
         primaryStage.setScene(layout);
         
