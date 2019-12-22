@@ -14,7 +14,7 @@ Sovelluksella ei tule olemaan käyttäjiä ensimmäisessä versiossa. Käyttäj�
 
 ## Jatkokehitysiedoita
 Mahollisia kehityksia tulevaisuudessa mikäli sovellukselle olisi kysyntää.
-*Kunnollinen relaatiotietokanta jotta saa tarkemmat teidot esineistä.
+* Kunnollinen relaatiotietokanta jotta saa tarkemmat teidot esineistä.
 * Voi luoda omia hahmoja joille kerätä esineet kokonaisuudeksi.
 * Hahmon avulla saa selkeän listauksen mitä kaikkea pitää tehdä jotta haluttu kokonaisuus saadaan.
 * Sovellus ehdottaa esineitä hahmolle perustietojen avulla mitä hahmon halutaan tekevän.

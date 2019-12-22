@@ -1,7 +1,7 @@
 # PoeItems
 
-Sovelluksen avulla on mahdollista selvittää erinlaiset tavat saada tieynlaisia tavaroita pelissä Path of Exile. Sovelluksen avulla on mahdollista luoda oma hahmo jolle kerätä halutut tavarat ja näin nähdä
-listaus tavoista miten tavart voi saada.
+Sovelluksen avulla on mahdollista selvittää erinlaiset tavat saada tieynlaisia esineitä pelissä Path of Exile. Sovelluksen avulla on mahdollista rakentaa oma "hahmo" jolle kerätä halutut esineet ja näin nähdä
+listaus tavoista miten ja mistä esineet voi saada.
 
 ## Dokumentointi
 

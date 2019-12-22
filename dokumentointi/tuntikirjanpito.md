@@ -21,4 +21,5 @@ Päivä | Aika | Mitä tein
 19.12 | 5 | Korjailin projektin ongelmia javadocin/jacocon kanssa, lisäilin testejä.
 20.12 | 4 | Ongelmia testien kanssa, en kerennyt setvimään täysin mistä kyse, testit jotenkin ratkaistu.
 21.12 | 4 | Tein viimeiset viilaukset dokumentteihin, linkit jne.
-Yhteensä | 64 |
+22.12 | 1 | Lisäsin tietoja google sheetsiin ja tarkistin vielä dokumentit läpi.
+Yhteensä | 105 |

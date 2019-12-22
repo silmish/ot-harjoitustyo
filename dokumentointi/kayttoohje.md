@@ -7,7 +7,7 @@ Lataa tiedosto [poeitems.jar](https://github.com/silmish/ot-harjoitustyo/release
 
 Ohjelma käynnistetään komennolla
 
-java -jar poeitems.jar
+java -jar poeitems-1.0.jar
 
 ## Esineiden valitsiminen
 
